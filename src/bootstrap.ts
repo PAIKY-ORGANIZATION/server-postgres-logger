@@ -12,7 +12,7 @@ const setENV = ()=>{
 
 
      //* Check for required environment variables or throw stop execution.   
-    const requiredVars = ['STARTUP']
+    const requiredVars = ['STARTUP', 'DATABASE_URL']
 
     requiredVars.forEach((varName)=>{
         if(!process.env[varName]){
