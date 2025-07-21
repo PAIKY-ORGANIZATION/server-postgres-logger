@@ -19,6 +19,7 @@ model reqLog {
 
   ip String
   country String
-  mainLogInfo String
+  action String
+  appName String
   additionalLogInfo String?
 }

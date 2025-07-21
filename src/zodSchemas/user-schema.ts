@@ -7,7 +7,8 @@ export const addLogRequestSchema = z.object({
     body: z.object({
         ip: z.string(),
         country: z.string(),
-        mainLogInfo: z.string(),
+        appName: z.string(),
+        action: z.string(),
         additionalLogInfo: z.string().optional()
     })
 })
