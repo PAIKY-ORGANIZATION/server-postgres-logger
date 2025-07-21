@@ -3,6 +3,6 @@ services:
     build: .
     ports:
       - "3000:3001" #* 3000 because this is the logger server all others connect to
-    command: npm run dev_docker
+    command: sh -c "npx prisma generate && npm run dev_docker" #! I'm no longer going to apply migrations here (nor npx reset).
     volumes:
       - "./src:/app/src" #! Not readonly.   Avoid it if you plan on using prisma which generates the client in the src folder. 
