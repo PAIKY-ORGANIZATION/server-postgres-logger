@@ -1,7 +1,7 @@
 import './bootstrap.js' // This  needs to be imported at the top in order for environment variables to be loaded successfully.
 
 import express from 'express';
-import { router as usersRouter } from './routes/postgres-logs-router.js';
+import { router as reqLoggerRouter } from './routes/postgres-logs-router.js';
 import {errorMiddleware} from 'custom-exceptions-express'
 
 
@@ -11,7 +11,7 @@ app.use(express.json());
 
 //Custom middleware
 //Routes
-app.use('/api',  usersRouter);
+app.use('/api',  reqLoggerRouter);
 
 
 

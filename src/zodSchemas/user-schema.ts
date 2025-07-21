@@ -13,4 +13,4 @@ export const addLogRequestSchema = z.object({
 })
 
 
-export type AggLogRequestSchema = z.infer<typeof addLogRequestSchema>
+export type AggLogRequestSchema = z.infer<typeof addLogRequestSchema>['body']
