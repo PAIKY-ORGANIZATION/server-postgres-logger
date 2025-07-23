@@ -7,5 +7,8 @@ export const addLog = async(req: Request<{}, {}, AggLogRequestSchema>, res: Resp
 		data: req.body //$ Pass the body AS IS. It should perfectly map the schema.prisma from the http request we receive
 	})
 	
+	
 	res.send('OKK')
 }
+
+
