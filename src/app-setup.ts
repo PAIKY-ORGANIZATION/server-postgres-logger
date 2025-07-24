@@ -14,7 +14,6 @@ app.use(express.json());
 app.use('/api',  reqLoggerRouter);
 
 
-
 //Error Middleware
 app.use(errorMiddleware) // Optional, recommended
 
