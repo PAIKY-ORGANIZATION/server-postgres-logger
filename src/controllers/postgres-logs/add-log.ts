@@ -23,10 +23,6 @@ export const addLog = async(req: Request<{}, {}, AggLogRequestSchema>, res: Resp
 	})
 
 
-	console.log(user);
-	
-
-
 	await prisma.reqLog.create({
 		data: {
 			action,
