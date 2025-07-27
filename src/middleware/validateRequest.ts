@@ -20,7 +20,7 @@ export const validate = (controller: ControllerFunction, schema?: AnyZodObject, 
 			next();
 		} catch (e) {
 			
-			console.log(e);
+			console.dir(e, { depth: 2 });
 			
 
 			let exception;
