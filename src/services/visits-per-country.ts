@@ -4,6 +4,10 @@ import { prisma } from '../lib/primsa.js';
 //% Continuing theory from visits-per-project.ts
 //% Continuing theory from visits-per-project.ts
 
+
+
+//? STILL HAVE TO COLLECT DATA TO TRY THIS
+
 export const getVisitsPerCountry = async () => {
 
     //* Old, single-table schema with only request-logs
