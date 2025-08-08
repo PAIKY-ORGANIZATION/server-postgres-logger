@@ -8,6 +8,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  ip String @unique //$ Even though this could be the ID, it's not a good practice to use it as the primary key.
+  id String @id @default(uuid())
+  country String
+  contact String? //$ This could be email or phone number. //$ Currently, it's not being added. 
+  created_at DateTime? @default(now())
+  requests reqLog[]
+}
+
+
 model reqLog {
   id                String    @id @default(uuid())
   additionalLogInfo String?
@@ -20,11 +30,3 @@ model reqLog {
 }
 
 
-model User {
-  ip String @unique //$ Even though this could be the ID, it's not a good practice to use it as the primary key.
-  id String @id @default(uuid())
-  country String
-  contact String? //$ This could be email or phone number. //$ Currently, it's not being added. 
-  created_at DateTime? @default(now())
-  requests reqLog[]
-}
