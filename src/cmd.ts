@@ -3,18 +3,20 @@ import { getVisitsPerCountry } from './services/visits-per-country.js';
 import { getVisitsPerProject } from './services/visits-per-project.js';
 import { getVisitsPerIp } from './services/visits-per-ip.js';
 import { getVisitCount } from './services/visits-count.js';
+import { get50LatestVisits } from './services/get-50-latests-visits.js';
 
 const getVisitsPerProjectKey = 'Get visits per project'; //$ Just avoiding typos
 const getVisitsPerCountryKey = 'Get visits per country'; //$ Just avoiding typos
 const getVisitsPerIpKey = 'Get visits per ip';
 const getVisitCountKey = 'Get visit count';
+const get50LatestVisitsKey = 'Get 50 Latests visits';
 
 const main = async()=>{
 
     const result = await inquirer.prompt([{
         name: 'Action',
         message: 'What  action do you want to perform?',
-        choices: [getVisitsPerProjectKey, getVisitsPerCountryKey, getVisitsPerIpKey, getVisitCountKey],
+        choices: [getVisitsPerProjectKey, getVisitsPerCountryKey, getVisitsPerIpKey, getVisitCountKey, get50LatestVisitsKey],
         type: 'list'
     }])
 
@@ -31,6 +33,10 @@ const main = async()=>{
         case getVisitCountKey:
             console.log(await getVisitCount());
             break;
+        case get50LatestVisitsKey:
+            console.log(await get50LatestVisits());
+            break;
+            
 
 
     }
